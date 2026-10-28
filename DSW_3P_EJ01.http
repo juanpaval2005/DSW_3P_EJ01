@@ -1,0 +1,61 @@
+@DSW_3P_EJ01_HostAddress = http://localhost:5197
+
+### Obtener todas
+GET {{DSW_3P_EJ01_HostAddress}}/api/misiones
+Accept: application/json
+
+### Consultar por id
+GET {{DSW_3P_EJ01_HostAddress}}/api/misiones/1
+Accept: application/json
+
+### Id inexistente (404)
+GET {{DSW_3P_EJ01_HostAddress}}/api/misiones/999
+Accept: application/json
+
+### Registrar
+POST {{DSW_3P_EJ01_HostAddress}}/api/misiones
+Content-Type: application/json
+
+{
+  "nombre": "Rescatar al herrero",
+  "dificultad": "Fácil",
+  "recompensaXP": 150
+}
+
+### Registrar con datos inválidos (400)
+POST {{DSW_3P_EJ01_HostAddress}}/api/misiones
+Content-Type: application/json
+
+{
+  "nombre": "",
+  "dificultad": "Extrema",
+  "recompensaXP": -10
+}
+
+### Actualizar
+PUT {{DSW_3P_EJ01_HostAddress}}/api/misiones/1
+Content-Type: application/json
+
+{
+  "nombre": "Rescatar al herrero",
+  "dificultad": "Fácil",
+  "recompensaXP": 200,
+  "completada": true
+}
+
+### Actualizar inexistente (404)
+PUT {{DSW_3P_EJ01_HostAddress}}/api/misiones/999
+Content-Type: application/json
+
+{
+  "nombre": "Misión fantasma",
+  "dificultad": "Media",
+  "recompensaXP": 100,
+  "completada": false
+}
+
+### Eliminar
+DELETE {{DSW_3P_EJ01_HostAddress}}/api/misiones/4
+
+### Eliminar inexistente (404)
+DELETE {{DSW_3P_EJ01_HostAddress}}/api/misiones/999

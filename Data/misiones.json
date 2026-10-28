@@ -1,0 +1,23 @@
+[
+  {
+    "Id": 1,
+    "Nombre": "Rescatar al herrero",
+    "Dificultad": "Fácil",
+    "RecompensaXP": 200,
+    "Completada": true
+  },
+  {
+    "Id": 2,
+    "Nombre": "Derrotar al dragón de hielo",
+    "Dificultad": "Difícil",
+    "RecompensaXP": 1200,
+    "Completada": false
+  },
+  {
+    "Id": 3,
+    "Nombre": "Recolectar hierbas del pantano",
+    "Dificultad": "Media",
+    "RecompensaXP": 300,
+    "Completada": false
+  }
+]
