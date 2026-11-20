@@ -1,12 +1,13 @@
 using DSW_3P_EJ01.Models;
 using DSW_3P_EJ01.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DSW_3P_EJ01.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-[Produces("application/json")]
+[Authorize]
 public class MisionesController : ControllerBase
 {
     private readonly IMisionService _service;

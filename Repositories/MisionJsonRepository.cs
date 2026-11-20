@@ -46,7 +46,7 @@ public class MisionJsonRepository : IMisionRepository
         File.WriteAllText(_ruta, json);
     }
 
-    public List<Mision> ObtenerTodas()
+    public List<Mision> ObtenerTodos()
     {
         lock (_bloqueo)
         {
