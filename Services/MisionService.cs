@@ -21,7 +21,7 @@ public class MisionService : IMisionService
 
     public List<Mision> ObtenerTodas()
     {
-        return _repository.ObtenerTodas();
+        return _repository.ObtenerTodos();
     }
 
     public Mision ObtenerPorId(int id)

@@ -4,7 +4,7 @@ namespace DSW_3P_EJ01.Repositories;
 
 public interface IMisionRepository
 {
-    List<Mision> ObtenerTodas();
+    List<Mision> ObtenerTodos();
     Mision? ObtenerPorId(int id);
     Mision Agregar(Mision nueva);
     bool Actualizar(int id, Mision actualizada);
